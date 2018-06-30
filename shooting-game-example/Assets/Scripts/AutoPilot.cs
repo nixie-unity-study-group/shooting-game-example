@@ -24,9 +24,5 @@ public class AutoPilot : MonoBehaviour {
 			Vector2 nextPosition = new Vector2(-5, 0);
 			transform.position = Vector2.MoveTowards(currentPosition, nextPosition, 0.1f);	
 		}
-		
-
-		
-		
 	}
 }
