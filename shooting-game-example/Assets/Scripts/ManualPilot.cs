@@ -5,8 +5,8 @@ using UnityEngine;
 public class ManualPilot : MonoBehaviour {
 	public float moveVelocity = 0.1f;
 	public float maxRange = 5.0f;
-	private Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
-	private Vector2 nextPosition = new Vector2(transform.position.x, transform.position.y);
+	private Vector2 currentPosition;
+	private Vector2 nextPosition;
 
 	// Use this for initialization
 	void Start () {
