@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletMovement : MonoBehaviour {
-	public float bulletSpeed = 0.1f;
-	public float bulletBorderY = 6;
+public class EnemyAI : MonoBehaviour {
+	public float enemySpeed = 0.1f;
+	public float enemyBorderY = -6;
 
 	private Vector2 currentPosition;
 	private Vector2 nextPosition;
@@ -16,10 +16,10 @@ public class BulletMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (transform.position.y < bulletBorderY) {
+		if (transform.position.y > enemyBorderY) {
 			Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
-			Vector2 nextPosition = new Vector2(transform.position.x, bulletBorderY);
-			transform.position = Vector2.MoveTowards(currentPosition, nextPosition, bulletSpeed);
+			Vector2 nextPosition = new Vector2(transform.position.x, enemyBorderY);
+			transform.position = Vector2.MoveTowards(currentPosition, nextPosition, enemySpeed);
 		} else {
 			Object.Destroy(this.gameObject);
 		}
