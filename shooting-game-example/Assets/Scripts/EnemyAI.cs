@@ -26,6 +26,7 @@ public class EnemyAI : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
+		GameManager.AddScore(5);
         Object.Destroy(this.gameObject);
     }
 }
